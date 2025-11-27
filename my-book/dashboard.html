@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard — Tracks of a Modern-Day Hobo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<h1>Tracks of a Modern-Day Hobo</h1>
+<nav>
+<a href="index.html">Home</a>
+<button id="logoutBtnTop">Log out</button>
+</nav>
+</header>
+
+
+<main class="container">
+<section>
+<h2>Welcome — <span id="userEmail">(you)</span></h2>
+<p>Thanks for creating an account. Use the button below to purchase the book via PayPal.</p>
+
+
+<!-- PayPal form using classic HTML POST to PayPal. It opens a PayPal payment page in a new tab. -->
+<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="dicejones47@gmail.com">
+<input type="hidden" name="item_name" value="Tracks of a Modern-Day Hobo - Paperback">
+<input type="hidden" name="amount" value="14.99">
+<input type="hidden" name="currency_code" value="USD">
+<!-- Optional return URL: users may return to thankyou.html after payment
+Note: For automatic return, enable Auto Return in your PayPal merchant settings. -->
+<input type="hidden" name="return" value="thankyou.html">
+
+
+<button class="btn" type="submit">Buy now — $14.99</button>
+</form>
+
+
+</section>
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+```
