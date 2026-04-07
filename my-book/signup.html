@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sign Up — Tracks of a Modern-Day Hobo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html">Home</a>
+<main class="auth-container">
+<h2>Create an account</h2>
+<form id="signupForm">
+<label for="email">Email</label>
+<input id="email" type="email" required />
+
+
+<label for="password">Password</label>
+<input id="password" type="password" minlength="6" required />
+
+
+<button class="btn" type="submit">Sign up</button>
+</form>
+<p>Already have an account? <a href="login.html">Log in</a></p>
+<p id="signupMessage" class="message"></p>
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+```

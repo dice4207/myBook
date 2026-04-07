@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard — Tracks of a Modern-Day Hobo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<h1>Tracks of a Modern-Day Hobo</h1>
+<nav>
+<a href="index.html">Home</a>
+<button id="logoutBtnTop">Log out</button>
+</nav>
+</header>
+
+
+<main class="container">
+<section>
+<h2>Welcome — <span id="userEmail">(you)</span></h2>
+<p>Thanks for creating an account. Use the button below to purchase the book via PayPal.</p>
+
+
+<!-- PayPal form using classic HTML POST to PayPal. It opens a PayPal payment page in a new tab. -->
+<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="dicejones47@gmail.com">
+  <input type="hidden" name="item_name" value="Tracks of a Modern-Day Hobo - Paperback">
+  <input type="hidden" name="amount" value="24.99">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- This will hold the Firebase UID -->
+  <input type="hidden" name="custom" id="paypalCustom">
+
+  <!-- background notification URL -->
+  <input type="hidden" name="notify_url" value="https://YOUR-BACKEND-URL.com/paypal/ipn">
+
+  <!-- where user goes after payment -->
+  <input type="hidden" name="return" value="https://your-domain.com/thankyou.html">
+
+  <button class="btn" type="submit">Buy now — $24.99</button>
+</form>
+
+
+
+</section>
+
+</main>
+<footer>
+  <main class="container1">
+ 
+    <div class="container1">
+
+   
+  <container1 {
+    background-image: url('trainmap.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* This scales image up to fit without cutting it */
+  background-size: contain;
+  height: 3000px; /* Set a fixed height for the container */
+
+}
+
+
+></container1>
+  
+
+ 
+ 
+  </main>
+  
+<script src="card.js"></script>
+<p> Use the form below to pay with a credit card:</p>
+<form id="cc-form">
+  <input type="text" name="number">
+  <input type="text" name="expiry">
+  <input type="text" name="cvc">
+</form>
+<button class="btn" id="payBtn">Pay with card</button>
+<script>
+  
+  new Card({
+    form: '#cc-form',
+    numberInput: 'input[name="number"]',
+    expiryInput: 'input[name="expiry"]',
+    cvcInput: 'input[name="cvc"]',
+    container: '.card-wrapper'
+  });
+  </script>
+ <p>&copy; <span id="year"></span> Dice Jones</p>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
