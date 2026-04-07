@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard — Tracks of a Modern-Day Hobo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Tracks of a Modern-Day Hobo</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <button id="logoutBtnTop">Log out</button>
+  </nav>
+</header>
+
+<main class="container">
+  <section>
+    <h2>Welcome — <span id="userEmail">(you)</span></h2>
+    <p>Thanks for creating an account. Use the button below to purchase the book via PayPal.</p>
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="dicejones47@gmail.com">
+      <input type="hidden" name="item_name" value="Tracks of a Modern-Day Hobo - Paperback">
+      <input type="hidden" name="amount" value="24.99">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="custom" id="paypalCustom">
+      <input type="hidden" name="notify_url" value="https://YOUR-BACKEND-URL.com/paypal/ipn">
+      <input type="hidden" name="return" value="https://your-domain.com/thankyou.html">
+      <button class="btn" type="submit">Buy now — $24.99</button>
+    </form>
+  </section>
+
+  <section>
+    <p>Use the form below to pay with a credit card:</p>
+    <form id="cc-form">
+      <label for="number">Card number</label>
+      <input type="text" name="number" id="number">
+      <label for="expiry">Expiry date</label>
+      <input type="text" name="expiry" id="expiry">
+      <label for="cvc">CVC</label>
+      <input type="text" name="cvc" id="cvc">
+    </form>
+    <button class="btn" id="payBtn">Pay with card</button>
+    <div class="card-wrapper"></div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Dice Jones</p>
+</footer>
+
+<script src="card.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+<script>
+  new Card({
+    form: '#cc-form',
+    numberInput: 'input[name="number"]',
+    expiryInput: 'input[name="expiry"]',
+    cvcInput: 'input[name="cvc"]',
+    container: '.card-wrapper'
+  });
+</script>
+</body>
+</html>

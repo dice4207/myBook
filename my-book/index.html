@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tracks of a Modern-Day Hobo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Tracks of a Modern-Day Hobo</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="signup.html">Sign up</a>
+    <a href="login.html">Log in</a>
+    <a id="nav-dashboard" href="dashboard.html" style="display:none">Dashboard</a>
+    <button id="logoutBtn" style="display:none">Log out</button>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <img src="daisyDog.jpg" alt="Book cover placeholder" class="cover">
+    <div class="hero-text">
+      <h2>Tracks of a Modern-Day Hobo</h2>
+      <p class="tagline">Tracks of a Modern-Day Hobo is a raw, unfiltered memoir.</p>
+      <div id="buy-area">
+        <p>Want a copy? Create an account and then purchase.</p>
+        <a class="btn" href="signup.html">Create account</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h3>About the book</h3>
+    <p>Tracks of a Modern-Day Hobo is a raw, unfiltered memoir of a man who lived on the fringes, riding freight trains, hitchhiking highways, surviving brutal injuries, and somehow finding hope through it all. Dice Jones wasn’t born to stay still. Raised in chaos, forged in the fires of group homes, train yards, and back-alley survival, he found freedom the only way he knew how, by running head first into the unknown. Told with brutal honesty and unexpected beauty, this memoir rips through addiction, heartbreak, street violence, and near-death experiences including the one that left him mangled beneath a moving train. This isn’t a story about giving up. It’s about getting up again, and again, and again. From Rainbow Gatherings to a near-fatal accident, this isn’t a tale of redemption. It’s a story of resilience, freedom, and the will to keep moving forward, even with one hand missing and the odds stacked sky high. Tracks of a Modern-Day Hobo isn’t your average memoir. If you’ve ever felt like you didn’t belong, if you’ve ever had to fight just to stay alive, this one’s for you.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Dice Jones</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

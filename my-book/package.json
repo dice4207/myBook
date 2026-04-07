@@ -1,0 +1,12 @@
+﻿{
+  "name": "my-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for the my-book project",
+  "scripts": {
+    "start": "python -m http.server 8080"
+  },
+  "dependencies": {
+    "firebase": "^9.23.0"
+  }
+}
